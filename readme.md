@@ -7,9 +7,8 @@ Esse é o projeto do curso **ESPECIALIZAÇÃO LATO SENSU EM DESENVOLVIMENTO DE S
 ## 📱 Projeto
 
 Este projeto usa da associação de imagens figuras do dia a dia, auxiliar desenvolvimento infantil.
-Descrição do contexto de uso do aplicativo: 
-Público-alvo;
-O público alvo que o app deseja alcançar é crianças de 2 a 5 anos.
+
+Público-alvo: O público alvo que o app deseja alcançar é crianças de 2 a 5 anos.
 
 
 ## 🧑‍💻 Técnicas e Tecnologias

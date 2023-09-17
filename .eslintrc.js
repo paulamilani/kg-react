@@ -24,7 +24,7 @@ module.exports = {
     "parserOptions": {
         "ecmaVersion": "latest",
         "sourceType": "module",
-        "project": './tsconfig.json' // The error starts here
+        "project": 'tsconfig.eslint.json' // The error starts here
     },
     "plugins": [
         "react"
