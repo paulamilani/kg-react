@@ -1,10 +1,8 @@
 import React, {Component} from 'react';
 import {View, Image, StyleSheet} from 'react-native';
 
-class DisplayAnImage extends Component {
-  render() {
-    return (
-      <View style={styles.container}>
+export default function Avatar() {
+    return <View style={styles.container}>
         <Image
           style={styles.tinyLogo}
           source={require('@expo/snack-static/react-native-logo.png')}
@@ -13,15 +11,7 @@ class DisplayAnImage extends Component {
           style={styles.tinyLogo}
           source={{uri: 'https://reactnative.dev/img/tiny_logo.png'}}
         />
-        <Image
-          style={styles.logo}
-          source={{
-            uri: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAzCAYAAAA6oTAqAAAAEXRFWHRTb2Z0d2FyZQBwbmdjcnVzaEB1SfMAAABQSURBVGje7dSxCQBACARB+2/ab8BEeQNhFi6WSYzYLYudDQYGBgYGBgYGBgYGBgYGBgZmcvDqYGBgmhivGQYGBgYGBgYGBgYGBgYGBgbmQw+P/eMrC5UTVAAAAABJRU5ErkJggg==',
-          }}
-        />
-      </View>
-    );
-  }
+      </View>  
 }
 
 const styles = StyleSheet.create({
@@ -37,5 +27,3 @@ const styles = StyleSheet.create({
       height: 58,
     },
   });
-
-export default DisplayAnImage;

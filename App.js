@@ -1,10 +1,12 @@
 import React from 'react';
 import { SafeAreaView } from 'react-native';
+import Home from './src/view';
 
-function App() {
-  return <SafeAreaView>
-    <Home />
+export default function App() {
+  return ( 
+  <SafeAreaView>
+    <Home /> 
   </SafeAreaView>
+  );
 }
 
-export default App;
