@@ -1,8 +1,8 @@
-# KidsGame
+# ⚛️ KidsGame
 
-# ⚛️Kids Game: App jogo infantil para desenvolvimento da aprendizagem
+## App jogo infantil para desenvolvimento da aprendizagem
 
-Esse é o projeto do curso **ESPECIALIZAÇÃO LATO SENSU EM DESENVOLVIMENTO DE SISTEMAS PARA DISPOSITIVOS MÓVEIS**
+Esse é o projeto do curso **ESPECIALIZAÇÃO LATO SENSU EM DESENVOLVIMENTO DE SISTEMAS PARA DISPOSITIVOS MÓVEIS** IFSP campus São Carlos.
 
 ## 📱 Projeto
 
@@ -11,8 +11,6 @@ Descrição do contexto de uso do aplicativo:
 Público-alvo;
 O público alvo que o app deseja alcançar é crianças de 2 a 5 anos.
 
-
-<img src="https://user-images.githubusercontent.com/9091491/123982988-e3ccb700-d999-11eb-880e-872881ee8b10.gif" width="350" />
 
 ## 🧑‍💻 Técnicas e Tecnologias
 
@@ -31,6 +29,9 @@ As técnicas e tecnologias utilizadas no projeto são:
 - `StyleSheet`: estilização básica de componentes
 - `Dimensions`: captura de dados das dimenções da tela
 - `biblioteca react-navigation`: para navegação de telas
+- `Eslint`: para análise de código
+- `npm`: para gerenciamento de pacotes
+
 
 ## 📲 Executando o projeto
 
