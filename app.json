@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "kg-react",
-    "slug": "kg-react",
+    "name": "kg",
+    "slug": "kg",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -25,6 +25,9 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      "expo-build-properties"
+    ]
   }
 }

@@ -10,7 +10,6 @@ Este projeto usa da associação de imagens figuras do dia a dia, auxiliar desen
 
 Público-alvo: O público alvo que o app deseja alcançar é crianças de 2 a 5 anos.
 
-
 ## 🧑‍💻 Técnicas e Tecnologias
 
 As técnicas e tecnologias utilizadas no projeto são:
@@ -23,7 +22,7 @@ As técnicas e tecnologias utilizadas no projeto são:
   - `Image`: componente para exibir imagens
   - `TouchableOpacity`: componente para criar áreas clicáveis
 - `Componentes customizados`: criação e utilização de componentes customizados
-- `Suporte a telas`: não permitir que conteúdos estejam sob a *StatusBar* (barra superior nativa) ou barra de gestos do iPhone
+- `Suporte a telas`: não permitir que conteúdos estejam sob a _StatusBar_ (barra superior nativa) ou barra de gestos do iPhone
 - `Expo Google Fonts`: suporte a fontes do google via Expo
 - `StyleSheet`: estilização básica de componentes
 - `Dimensions`: captura de dados das dimenções da tela
@@ -31,12 +30,12 @@ As técnicas e tecnologias utilizadas no projeto são:
 - `Eslint`: para análise de código
 - `npm`: para gerenciamento de pacotes
 
-
 ## 📲 Executando o projeto
 
 ### ✔️ Pré-requisitos
 
 Para conseguir seguir este README e rodar o projeto você pode precisar dos seguintes itens:
+
 - Git para clonar o projeto e acessar as branches. Você pode instalar [aqui](https://git-scm.com/downloads);
 - Node para podermos rodar `expo` e `npm`. Você pode instala-lo [aqui](https://nodejs.org/en/);
 - Um celular Android ou iOS com o aplicativo Expo instalado, ou então algum simulador Android ou iOS no computador;
@@ -51,20 +50,22 @@ npm --version
 ```
 
 Com o `node` instalado instalar a dependencia com o seguinte comando:
+
 ```
 npx expo install react-native-web@~0.18.10 react-dom@18.2.0
 @expo/webpack-config@^18.0.1
 ```
 
-
 ### ▶️ Rodando o Projeto
 
 Agora que já tem a pasta do projeto na sua máquina, dentro dela instale as dependências:
+
 ```
 npm install
 ```
 
 Então podemos rodar o projeto:
+
 ```
 npm run android
 
@@ -79,3 +80,29 @@ Caso estiver com o celular, **escaneie o QR code com o aplicativo do Expo** ou a
 Se tiver um emulador, escolha o comando de execução sugerido no terminal.
 
 Pronto, agora o app você deve ver o app rodando.
+
+### Caso de erro
+
+for macOS or Linux
+
+```
+rm -rf node_modules
+
+rm -f package-lock.json
+
+rm -f yarn.lock
+
+```
+
+# 👇️ clean npm cache
+
+```
+npm cache clean --force
+```
+
+# 👇️ install packages
+
+```
+npm install
+
+```
