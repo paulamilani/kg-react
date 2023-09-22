@@ -94,13 +94,13 @@ rm -f yarn.lock
 
 ```
 
-# 👇️ clean npm cache
+### 👇️ clean npm cache
 
 ```
 npm cache clean --force
 ```
 
-# 👇️ install packages
+### 👇️ install packages
 
 ```
 npm install
