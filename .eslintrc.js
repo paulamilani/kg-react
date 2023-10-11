@@ -2,7 +2,11 @@ module.exports = {
     env: {
         es2021: true,
     },
-    extends: ['airbnb', 'plugin:react/recommended', 'prettier'],
+    extends: [
+        'prettier',      // /base, /essential, /strongly-recommended, /recommended
+        'plugin:prettier/recommended',   // turns off all ESLINT rules that are unnecessary due to Prettier or might conflict with Prettier. 
+        'eslint:recommended'
+      ],
     parserOptions: {
         ecmaFeatures: {
             jsx: true,

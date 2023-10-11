@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { View, Button, StyleSheet } from "react-native";
-import Flashcard from "../../componentes/Flashcard";
+import Flashcard from "../../componentes/Flashcard"
 
 const flashcards = [
   { question: "Qual é a capital da França?", answer: "Paris" },

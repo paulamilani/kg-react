@@ -3,22 +3,22 @@ import { View, Text, StyleSheet } from "react-native";
 import LottieView from "lottie-react-native";
 import { Header } from "../componentes/Header";
 import { Button } from "react-native-elements";
+import { useNavigation } from "@react-navigation/native";
 
-const Game: React.FC<{ navigation: any }> = ({ navigation }) => {
+const Game: React.FC<{ navigation: any }> = ({ navigation: { navigate} }) => {
   const RandomFlashcard = () => {
-    const parentNavigation = navigation.getParent();
+    const parentNavigation = navigate
     if (parentNavigation) {
-      parentNavigation.navigate("FlashCards");
+      parentNavigation("FlashCards");
     }
   };
 
   const JogoMemory = () => {
-    const parentNavigation = navigation.getParent();
+    const parentNavigation = navigate
     if (parentNavigation) {
-      parentNavigation.navigate("JogoDaMemoria");
+      parentNavigation("JogoDaMemoria");
     }
   };
-
   return (
     <>
       <Header title="Home" view="home" />

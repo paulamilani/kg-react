@@ -1,6 +1,5 @@
-// Flashcard.tsx
-import React, { useState } from "react";
-import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
+import React, { useState } from "react"
+import { StyleSheet, Text, TouchableOpacity, View } from "react-native"
 
 interface FlashcardProps {
   question: string;
@@ -11,8 +10,8 @@ const Flashcard: React.FC<FlashcardProps> = ({ question, answer }) => {
   const [showAnswer, setShowAnswer] = useState(false);
 
   const toggleAnswer = () => {
-    setShowAnswer(!showAnswer);
-  };
+      setShowAnswer(!showAnswer)
+  }
 
   return (
     <TouchableOpacity style={styles.card} onPress={toggleAnswer}>
