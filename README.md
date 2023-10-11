@@ -2,13 +2,13 @@
 
 ## App jogo infantil para desenvolvimento da aprendizagem
 
-Esse é o projeto do curso **ESPECIALIZAÇÃO LATO SENSU EM DESENVOLVIMENTO DE SISTEMAS PARA DISPOSITIVOS MÓVEIS** IFSP campus São Carlos.
+Projeto de conclusão do curso **ESPECIALIZAÇÃO LATO SENSU EM DESENVOLVIMENTO DE SISTEMAS PARA DISPOSITIVOS MÓVEIS** IFSP campus São Carlos.
 
 ## 📱 Projeto
 
-Este projeto usa da associação de imagens figuras do dia a dia, auxiliar desenvolvimento infantil.
+Este projeto usa da associação de imagens, figuras e perguntas do dia a dia para auxiliar desenvolvimento infantil.
 
-Público-alvo: O público alvo que o app deseja alcançar é crianças de 2 a 5 anos.
+Público-alvo: O público alvo que o app deseja alcançar é crianças de 4 a 8 anos.
 
 ## 🧑‍💻 Técnicas e Tecnologias
 
@@ -21,12 +21,12 @@ As técnicas e tecnologias utilizadas no projeto são:
   - `ScrollView`: container para blocos de componentes com barra de rolagem
   - `Image`: componente para exibir imagens
   - `TouchableOpacity`: componente para criar áreas clicáveis
+  -`Button`: componente botão
 - `Componentes customizados`: criação e utilização de componentes customizados
-- `Suporte a telas`: não permitir que conteúdos estejam sob a _StatusBar_ (barra superior nativa) ou barra de gestos do iPhone
-- `Expo Google Fonts`: suporte a fontes do google via Expo
+- `React Navigation`: gerenciamento da apresentação e da transição entre telas
 - `StyleSheet`: estilização básica de componentes
 - `Dimensions`: captura de dados das dimenções da tela
-- `biblioteca react-navigation`: para navegação de telas
+- `LottieView`: eventos de animação
 - `Eslint`: para análise de código
 - `npm`: para gerenciamento de pacotes
 
@@ -47,13 +47,6 @@ Se quiser testar as instalações, rodar os comandos abaixo separadamente deve m
 git --version
 node --version
 npm --version
-```
-
-Com o `node` instalado instalar a dependencia com o seguinte comando:
-
-```
-npx expo install react-native-web@~0.18.10 react-dom@18.2.0
-@expo/webpack-config@^18.0.1
 ```
 
 ### ▶️ Rodando o Projeto
