@@ -1,36 +1,30 @@
 module.exports = {
-    "env": {
-        "browser": true,
-        "es2021": true
+    env: {
+        es2021: true,
     },
-    "extends": [
-        "standard-with-typescript",
-        "plugin:react/recommended"
-    ],
-    "overrides": [
-        {
-            "env": {
-                "node": true
+    extends: ['airbnb', 'plugin:react/recommended', 'prettier'],
+    parserOptions: {
+        ecmaFeatures: {
+            jsx: true,
+        },
+        ecmaVersion: 12,
+        sourceType: 'module',
+    },
+    plugins: ['react', 'prettier'],
+    rules: {
+        'prettier/prettier': 'error',
+        'react/jsx-filename-extension': [
+            'warn',
+            {
+                extensions: ['.jsx', '.js'],
             },
-            "files": [
-                ".eslintrc.{js,cjs}"
-            ],
-            "parserOptions": {
-                "sourceType": "script"
-            }
-        }
-    ],
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-        "ecmaVersion": "latest",
-        "sourceType": "module",
-        "project": 'tsconfig.eslint.json' // The error starts here
+        ],
+        'import/prefer-default-export': 'off',
+        'react/state-in-constructor': 'off',
+        'react/static-property-placement': 'off',
+        'react/jsx-props-no-spreading': 'off',
+        'react/prop-types': 'off',
+        'no-param-reassign': 'off',
+        'no-console': 'off',
     },
-    "plugins": [
-        "react"
-    ],
-    "rules": {
-        "@typescript-eslint/explicit-function-return-type": "off"
-        
-    }
-}
+};

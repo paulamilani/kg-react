@@ -1,0 +1,3 @@
+
+[] refatorar nomes arquivos componentes e chamadas
+[] passar os arrays para um db - firebase

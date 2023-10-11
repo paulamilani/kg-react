@@ -23,7 +23,7 @@
       "src/**/*.tsx",
       "src/**/*.ts",
       "App.tsx"
-, "src/view/screen/ranking/index.tsx"    ],
+, "src/view/screen/ranking/index.tsx", "src/view/Ranking.js", "src/view/Game.js"    ],
     "exclude": [
       ".ci",
       "web-build",
