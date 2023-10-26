@@ -1,3 +1,4 @@
-
-[] refatorar nomes arquivos componentes e chamadas
-[] passar os arrays para um db - firebase
+[ ] refatorar nomes arquivos componentes e function
+[ ] conectar e passar os arrays mockados para um db - firebase
+[ ] implementar melhor os jogos
+[ ] construir a lógica do rank

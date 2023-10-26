@@ -1,25 +1,12 @@
-import { NavigationContainer, useNavigation } from "@react-navigation/native";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
-import Home from "./src/view/Home";
-import Avatars from "./src/view/Avatars";
-import Ranking from "./src/view/Ranking";
-import Game from "./src/view/Game";
-import React from "react";
-import Flashcards from "./src/view/game/Flashcards";
-import JogoDaMemoria from "./src/view/game/JogoDaMemoria";
-
-const Stack = createNativeStackNavigator();
-
-const GameStack: React.FC = () => {
-  return (
-    <Stack.Navigator>
-      <Stack.Screen name="FlashCards" component={Flashcards} />
-      <Stack.Screen name="JogoDaMemoria" component={JogoDaMemoria} />
-    </Stack.Navigator>
-  );
-};
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import Home from './src/view/Home';
+import Avatars from './src/view/Avatars';
+import Ranking from './src/view/Ranking';
+import React from 'react';
+import JogoDaMemoria from './src/view/game/JogoDaMemoria';
+import MemoriaGame from './src/view/game/MemoriaGame';
 
 const Tab = createBottomTabNavigator();
 
@@ -31,7 +18,7 @@ export default function App() {
           name="Home"
           component={Home}
           options={{
-            tabBarLabel: "Home",
+            tabBarLabel: 'Home',
             headerShown: false,
             tabBarIcon: ({ color }) => (
               <MaterialCommunityIcons name="home" color={color} size={26} />
@@ -42,7 +29,7 @@ export default function App() {
           name="Avatar"
           component={Avatars}
           options={{
-            tabBarLabel: "Avatar",
+            tabBarLabel: 'Avatar',
             headerShown: false,
             tabBarIcon: ({ color }) => (
               <MaterialCommunityIcons name="account" color={color} size={26} />
@@ -51,9 +38,9 @@ export default function App() {
         />
         <Tab.Screen
           name="Game"
-          component={Game}
+          component={JogoDaMemoria}
           options={{
-            tabBarLabel: "Game",
+            tabBarLabel: 'Game',
             headerShown: false,
             tabBarIcon: ({ color }) => (
               <MaterialCommunityIcons
@@ -68,7 +55,7 @@ export default function App() {
           name="Ranking"
           component={Ranking}
           options={{
-            tabBarLabel: "Ranking",
+            tabBarLabel: 'Ranking',
             headerShown: false,
             tabBarIcon: ({ color }) => (
               <MaterialCommunityIcons name="rocket" color={color} size={26} />

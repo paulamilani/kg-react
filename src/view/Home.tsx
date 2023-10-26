@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import { Button, Dialog, CheckBox } from "react-native-elements";
-import { View, Text, StyleSheet } from "react-native";
-import LottieView from "lottie-react-native";
-import { Header } from "../componentes/Header";
+import React, { useState } from 'react';
+import { Button, Dialog, CheckBox } from 'react-native-elements';
+import { View, Text, StyleSheet } from 'react-native';
+import LottieView from 'lottie-react-native';
+import { Header } from '../componentes/Header';
 
 interface DialogComponentProps {}
 
@@ -22,7 +22,7 @@ const Home: React.FunctionComponent<DialogComponentProps> = () => {
     <>
       <LottieView
         style={styles.lottie}
-        source={require("../../assets/animation_lnkhi18p.json")}
+        source={require('../../assets/animation_lnkhi18p.json')}
         autoPlay
         loop
       />
@@ -43,16 +43,19 @@ const Home: React.FunctionComponent<DialogComponentProps> = () => {
         </View>
         <Dialog isVisible={visible1} onBackdropPress={comoJogar}>
           <Dialog.Title title="Instruções" />
-          <Text>Aqui vai as regras do jogo!</Text>
+          <Text>
+            Selecione o jogo desejado. Kids Game tem uma seleção de jogos com o
+            objetivo de desenvolver criatividade, raciocínio lógico e diversão.
+          </Text>
         </Dialog>
 
         <Dialog isVisible={visible2} onBackdropPress={nivelDificuldade}>
           <Dialog.Title title="Selecione a dificuldade" />
-          {["Fácil", "Médio", "Difícil"].map((l, i) => (
+          {['Fácil', 'Médio', 'Difícil'].map((l, i) => (
             <CheckBox
               key={i}
               title={l}
-              containerStyle={{ backgroundColor: "white", borderWidth: 0 }}
+              containerStyle={{ backgroundColor: 'white', borderWidth: 0 }}
               checkedIcon="dot-circle-o"
               uncheckedIcon="circle-o"
               checked={checked === i + 1}
@@ -86,8 +89,8 @@ const styles = StyleSheet.create({
   },
   buttonContainer: {
     marginTop: 50,
-    justifyContent: "center",
-    alignItems: "center",
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   lottie: {
     marginTop: 70,
