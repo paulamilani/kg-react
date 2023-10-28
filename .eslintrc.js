@@ -3,10 +3,10 @@ module.exports = {
         es2021: true,
     },
     extends: [
-        'prettier',      // /base, /essential, /strongly-recommended, /recommended
-        'plugin:prettier/recommended',   // turns off all ESLINT rules that are unnecessary due to Prettier or might conflict with Prettier. 
-        'eslint:recommended'
-      ],
+        'prettier', // /base, /essential, /strongly-recommended, /recommended
+        'plugin:prettier/recommended', // turns off all ESLINT rules that are unnecessary due to Prettier or might conflict with Prettier.
+        'eslint:recommended',
+    ],
     parserOptions: {
         ecmaFeatures: {
             jsx: true,

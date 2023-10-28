@@ -4,9 +4,7 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import Home from './src/view/Home';
 import Avatars from './src/view/Avatars';
 import Ranking from './src/view/Ranking';
-import React from 'react';
-import JogoDaMemoria from './src/view/game/JogoDaMemoria';
-import MemoriaGame from './src/view/game/MemoriaGame';
+import JogoDaMemoria from './src/view/JogoDaMemoria';
 
 const Tab = createBottomTabNavigator();
 

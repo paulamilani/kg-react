@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, Alert } from 'react-native';
-import Card from '../../componentes/CardMemoria';
-import { Header } from '../../componentes/Header';
-import { set } from 'lodash';
+import Card from '../componentes/CardMemoria';
+import { Header } from '../componentes/Header';
+import { addDoc, collection } from 'firebase/firestore';
+import { db } from '../firebase/config';
 
 const JogoDaMemoria: React.FC = () => {
   const initialCards = [
@@ -22,13 +23,12 @@ const JogoDaMemoria: React.FC = () => {
     { id: 14, value: 'G', flipped: false },
     { id: 15, value: 'H', flipped: false },
     { id: 16, value: 'H', flipped: false },
-    // add jogo memoria
   ];
 
   const [cards, setCards] = useState(initialCards);
   const [selectedCards, setSelectedCards] = useState<number[]>([]);
   const [matches, setMatches] = useState<number[]>([]);
-  const [pontuacao, setPontuacao] = useState(0);
+  const [ponto, setPontuacao] = useState(0);
 
   useEffect(() => {
     if (selectedCards.length === 2) {
@@ -39,7 +39,7 @@ const JogoDaMemoria: React.FC = () => {
 
       if (card1.value === card2.value) {
         setMatches([...matches, card1.id, card2.id]);
-        setPontuacao(pontuacao + 1);
+        setPontuacao(ponto + 1);
       }
 
       setTimeout(() => {
@@ -80,11 +80,17 @@ const JogoDaMemoria: React.FC = () => {
     setSelectedCards((prevSelected) => [...prevSelected, cardId]);
   };
 
-  const shuffleCards = () => {
+  const shuffleCards = async (ponto: Number) => {
     setCards([...initialCards.sort(() => Math.random() - 0.5)]);
     setSelectedCards([]);
     setMatches([]);
     setPontuacao(0);
+    //try {
+    await addDoc(collection(db, 'person'), ponto);
+    //} catch (error) {
+    //console.log('Erro ao salvar pontuação');
+    //return error;
+    //}
   };
 
   return (
@@ -105,7 +111,7 @@ const JogoDaMemoria: React.FC = () => {
         <TouchableOpacity style={styles.shuffleButton} onPress={shuffleCards}>
           <Text style={styles.shuffleButtonText}>Embaralhar Cartas</Text>
         </TouchableOpacity>
-        <Text>Pontuação: {pontuacao}</Text>
+        <Text>Pontuação: {ponto}</Text>
       </View>
     </>
   );

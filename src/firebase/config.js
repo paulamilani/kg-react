@@ -1,7 +1,6 @@
 /* eslint-disable prettier/prettier */
-import * as firebase from 'firebase';
-import '@firebase/auth';
-import '@firebase/firestore';
+import { initializeApp } from 'firebase/app';
+import { getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
     apiKey: 'AIzaSyCXD8jnp7dyJa_EzLM_CNdZv-E-F5B4ZvE',
@@ -13,8 +12,8 @@ const firebaseConfig = {
     measurementId: 'G-ZM8Q797PEW',
 };
 
-if (!firebase.apps.length) {
-    firebase.initializeApp(firebaseConfig);
-}
+const app = initializeApp(firebaseConfig);
 
-export { firebase };
+const db = getFirestore(app);
+
+export { db };

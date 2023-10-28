@@ -25,3 +25,4 @@ web-report/
 /beta
 
 .expo-shared/
+.env

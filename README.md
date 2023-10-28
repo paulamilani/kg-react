@@ -6,7 +6,7 @@ Projeto de conclusão do curso **ESPECIALIZAÇÃO LATO SENSU EM DESENVOLVIMENTO 
 
 ## 📱 Projeto
 
-Este projeto usa da associação de imagens, figuras e perguntas do dia a dia para auxiliar desenvolvimento infantil.
+Este projeto usa da associação das letras do alfabeto para auxiliar desenvolvimento infantil.
 
 Público-alvo: O público alvo que o app deseja alcançar é crianças de 4 a 8 anos.
 
@@ -29,6 +29,8 @@ As técnicas e tecnologias utilizadas no projeto são:
 - `LottieView`: eventos de animação
 - `Eslint`: para análise de código
 - `npm`: para gerenciamento de pacotes
+- `Firebase`: para backend
+- `Firestone`: para banco de dados
 
 ## 📲 Executando o projeto
 
@@ -65,8 +67,6 @@ npm run android
 
 npm run ios
 
-
-npm run web
 ```
 
 Caso estiver com o celular, **escaneie o QR code com o aplicativo do Expo** ou a câmera que aparecerá no terminal.

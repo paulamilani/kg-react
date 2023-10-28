@@ -1,41 +1,45 @@
-// Ranking.tsx
-import React from 'react';
-import { View, Text, FlatList, StyleSheet } from 'react-native';
+import React, { useEffect, useState } from 'react';
+import { View, Text, StyleSheet } from 'react-native';
 import { Header } from '../componentes/Header';
-
-interface User {
-  id: number;
-  name: string;
-  score: number;
-}
+import { collection, getDocs, getFirestore } from 'firebase/firestore';
 
 const Ranking: React.FC = () => {
-  const users: User[] = [
-    { id: 1, name: 'Usuário 1', score: 100 },
-    { id: 2, name: 'Usuário 2', score: 85 },
-    { id: 3, name: 'Usuário 3', score: 92 },
-    { id: 4, name: 'Usuário 4', score: 78 },
-    { id: 5, name: 'Usuário 5', score: 110 },
-    // Adicione mais usuários conforme necessário
-  ];
+  const [dados, setDados] = useState<any[]>([]);
 
-  const renderUserItem = ({ item }: { item: User }) => (
-    <View style={styles.userItem}>
-      <Text style={styles.userName}>{item.name}</Text>
-      <Text style={styles.userScore}>Pontuação: {item.score}</Text>
-    </View>
-  );
+  const recuperarDadosDoFirestore = async () => {
+    const db = getFirestore();
+    const dadosRef = collection(db, 'person');
+
+    try {
+      const querySnapshot = await getDocs(dadosRef);
+      const dados = querySnapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }));
+      return dados;
+    } catch (error) {
+      console.error('Erro ao recuperar os dados:', error);
+      return [];
+    }
+  };
+
+  useEffect(() => {
+    async function carregarDados() {
+      const dadosDoFirestore = await recuperarDadosDoFirestore();
+      setDados(dadosDoFirestore);
+    }
+
+    carregarDados();
+  }, []);
 
   return (
     <>
       <Header title="Ranking" view="ranking" />
       <View style={styles.container}>
-        <Text style={styles.text}>Classificação dos Jogos!</Text>
-        <FlatList
-          data={users}
-          keyExtractor={(item) => item.id.toString()}
-          renderItem={renderUserItem}
-        />
+        <Text style={styles.text}>Classificação!</Text>
+        {dados.map((item) => (
+          <Text key={item.id}>{JSON.stringify(item)}</Text>
+        ))}
       </View>
     </>
   );
@@ -49,20 +53,6 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 24,
     marginBottom: 20,
-  },
-  userItem: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    marginBottom: 8,
-  },
-  userName: {
-    fontSize: 18,
-  },
-  userScore: {
-    fontSize: 16,
-    color: 'green',
-    fontWeight: 'bold',
   },
 });
 

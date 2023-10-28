@@ -1,4 +1,0 @@
-[ ] refatorar nomes arquivos componentes e function
-[ ] conectar e passar os arrays mockados para um db - firebase
-[ ] implementar melhor os jogos
-[ ] construir a lógica do rank

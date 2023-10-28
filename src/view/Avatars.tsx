@@ -10,6 +10,8 @@ import {
 } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Header } from '../componentes/Header';
+import { collection, addDoc } from 'firebase/firestore';
+import { db } from '../firebase/config';
 
 const avatars = [
   require('../../assets/images/user-hp.png'),
@@ -49,6 +51,16 @@ const AvatarSelection: React.FC = () => {
     }
   };
 
+  const salvarNome = async (nome: String) => {
+    //try {
+    await addDoc(collection(db, 'person'), nome);
+    //return 'ok';
+    //} catch (error) {
+    //console.log('Erro ao salvar nome');
+    //return 'error';
+    //}
+  };
+
   return (
     <>
       <Header title="Avatar" view="Avatar" />
@@ -78,7 +90,7 @@ const AvatarSelection: React.FC = () => {
           value={nome}
           onChangeText={setNome}
         />
-        <Button title="Salvar" />
+        <Button title="Salvar" onPress={() => salvarNome(nome)} />
       </View>
     </>
   );
