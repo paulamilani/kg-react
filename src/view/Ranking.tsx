@@ -36,9 +36,11 @@ const Ranking: React.FC = () => {
     <>
       <Header title="Ranking" view="ranking" />
       <View style={styles.container}>
-        <Text style={styles.text}>Classificação!</Text>
+        <Text style={styles.title}>Classificação!</Text>
         {dados.map((item) => (
-          <Text key={item.id}>{JSON.stringify(item)}</Text>
+          <Text style={styles.text} key={item.id}>
+            Nome: {item.nome} - Pontuação: {item.ponto}
+          </Text>
         ))}
       </View>
     </>
@@ -49,9 +51,15 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 16,
+    alignItems: 'center',
+  },
+  title: {
+    fontSize: 28,
+    marginBottom: 40,
+    textAlign: 'center',
   },
   text: {
-    fontSize: 24,
+    fontSize: 18,
     marginBottom: 20,
   },
 });
